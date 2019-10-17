@@ -3,8 +3,3 @@ class Carta:
         self.tipo=tipo
         self.nivel=nivel
         self.ruta=ruta
-
-
-
-
-

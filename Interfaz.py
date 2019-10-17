@@ -58,28 +58,28 @@ class Interfaz:
 			ventana.blit(logo,(0,0))
 			Jugar = pygame.image.load("botones/BotonJugar1.png")
 			Jugar2 = pygame.image.load("botones/BotonJugar2.png")
-			jugador2 = pygame.image.load("botones/BtnJugadores/Sombra/jugador2.png")
+			"""jugador2 = pygame.image.load("botones/BtnJugadores/Sombra/jugador2.png")
 			jugador22 = pygame.image.load("botones/BtnJugadores/Brillo/jugador2.png")
 			jugador3 = pygame.image.load("botones/BtnJugadores/Sombra/jugador3.png")
-			jugador33 = pygame.image.load("botones/BtnJugadores/Brillo/jugador3.png")
+			jugador33 = pygame.image.load("botones/BtnJugadores/Brillo/jugador3.png")"""
 			jugador4 = pygame.image.load("botones/BtnJugadores/Sombra/jugador4.png")
 			jugador44 = pygame.image.load("botones/BtnJugadores/Brillo/jugador4.png")
-			jugador5 = pygame.image.load("botones/BtnJugadores/Sombra/jugador5.png")
-			jugador55 = pygame.image.load("botones/BtnJugadores/Brillo/jugador5.png")
+			"""jugador5 = pygame.image.load("botones/BtnJugadores/Sombra/jugador5.png")
+			jugador55 = pygame.image.load("botones/BtnJugadores/Brillo/jugador5.png")"""
 
 			cursor1 = Cursor()
 			cursor1.update()
 
 			if ButtonsPlayers:
-				btnjugador1 = Boton(jugador2, jugador22, 220, 410)
-				btnjugador2 = Boton(jugador3, jugador33, 370, 410)
+				#btnjugador1 = Boton(jugador2, jugador22, 220, 410)
+				#btnjugador2 = Boton(jugador3, jugador33, 370, 410)
 				btnjugador3 = Boton(jugador4, jugador44, 520, 410)
-				btnjugador4 = Boton(jugador5, jugador55, 670, 410)
+				#btnjugador4 = Boton(jugador5, jugador55, 670, 410)
 
-				btnjugador1.update(ventana,cursor1)
-				btnjugador2.update(ventana,cursor1)
+				#btnjugador1.update(ventana,cursor1)
+				#btnjugador2.update(ventana,cursor1)
 				btnjugador3.update(ventana,cursor1)
-				btnjugador4.update(ventana,cursor1)
+				#btnjugador4.update(ventana,cursor1)
 				BotonInicio = False
 
 			if BotonInicio:
@@ -104,7 +104,7 @@ class Interfaz:
 						ActivarEventoBtns = True
 
 					elif (ActivarEventoBtns):
-						if (x >= 220 and y >= 410 and x <= 340 and y <= 470):
+						"""if (x >= 220 and y >= 410 and x <= 340 and y <= 470):
 							print 'Boton 2 Jugadores'
 							self.NumJug=2
 							Ciclo=False
@@ -112,20 +112,21 @@ class Interfaz:
 						elif (x >= 370 and y >= 410 and x <= 490 and y <= 470):
 							print 'Boton 3 Jugadores'
 							self.NumJug=3
-							Ciclo=False
+							Ciclo=False"""
 
-						elif (x >= 520 and y >= 410 and x <= 640 and y <= 470):
+						if (x >= 520 and y >= 410 and x <= 640 and y <= 470):
 							print 'Boton 4 Jugadores'
 							self.NumJug=4
 							Ciclo=False
 							# from labels import *
 
-						elif (x >= 670 and y >= 410 and x <= 790 and y <= 470):
+						"""elif (x >= 670 and y >= 410 and x <= 790 and y <= 470):
 							print 'Boton 5 Jugadores'
 							self.NumJug=5
-							Ciclo=False
+							Ciclo=False"""
 
 			pygame.display.update()
+
 	def Retornar(self):
 		return self.NumJug
 # Abrir = Interfaz()

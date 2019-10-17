@@ -1,12 +1,14 @@
 from Baraja import Baraja
 from Jugador_Cartas import Jugador_Cartas
 from Jugador import Jugador
+
 class ListaJugadorCartas(Baraja,Jugador_Cartas):
     def __init__(self):
         self.listajugadores=[]
         Baraja.__init__(self)
         self.mezclar()
         self.listageneral=[]
+
     def CrearJugadores(self,NumeroJugadores):
         for x in range(NumeroJugadores):
             self.listajugadores.append(Jugador("Jugador: "+str(x+1)))
@@ -17,6 +19,7 @@ class ListaJugadorCartas(Baraja,Jugador_Cartas):
             self.listajugadores[x].lista=minilista
             self.listageneral.append(minilista)
         return self.listageneral
+        
     def Ganador(self):
         niveles=[]
         listaempat=[]
@@ -24,6 +27,7 @@ class ListaJugadorCartas(Baraja,Jugador_Cartas):
             i.jugada,i.nivel,i.diccn=self.tipojugadas(i.lista)
         for i in self.listajugadores:
             print(str(i.nombre)+" "+" "+str(i.nivel)+" "+str(i.jugada))
+            #
         print("")
         n=len(self.listajugadores)
         j=0

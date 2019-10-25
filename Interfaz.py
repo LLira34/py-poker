@@ -6,6 +6,7 @@ class Interfaz:
 	def __init__(self):
 		self.Bandera1=1
 		self.NumJug=0
+		
 	def Ejecutar(self):
 		# class Prueba:
 		# 	def __init__(self, x):

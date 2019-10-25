@@ -2,17 +2,21 @@ import sys
 import pygame, sys
 from pygame.locals import *
 from Poker import ListaJugadorCartas
+
 class JuegoInterfaz:
+
 	def __init__(self, x):
-		self.Parametro=x
+		self.Parametro=x		
 	# def Imprimir(self):
 	# 	print self.Parametro
+
 	def IniciarJuego(self):
 		try:
 			print self.Parametro
 			Ciclo2=True
 			pygame.init()
 			gan=[]
+			gan2=[]
 			ventana= pygame.display.set_mode((1400, 700))
 			pygame.display.set_caption('Poker en Python & PyGame')
 			Color=(76,171,125,0.5)
@@ -23,19 +27,25 @@ class JuegoInterfaz:
 			fuente1 = pygame.font.Font(None, 28)
 			fuente2 = pygame.font.Font(None, 22)
 			fuente3 = pygame.font.Font(None, 40)
-			instruccion="*Presione espacio para repartir cartas*"
+			
+			# Genera random de las cartas
+			instruccion="*Presione 'ESPACIO' para repartir cartas*"
 			listajugadores=[]
 			posisioncartasobra=0
+			# variable game
 			game=ListaJugadorCartas.ListaJugadorCartas()
 			banespacio=True
 			banreiniciar=False
 			banganador=False
+
 			def marcos(xe,xt,ye,yt,Col):
 				marco = pygame.Rect(xe,xt,ye,yt)
 				pygame.draw.rect(ventana,Col,marco)
+
 			def drawlabel(texto,x,y):
 				label = fuente2.render(texto,0,Blanco)
 				ventana.blit(label,(x,y))
+
 			def cargarlista(x,y,lista,vs,t):
 				for i in lista:
 					if t:
@@ -45,9 +55,11 @@ class JuegoInterfaz:
 					cartassobramtes = pygame.image.load(str(i.ruta))
 					ventana.blit(cartassobramtes,(x,y))
 				return x
+
 			def generarinterfaz(nj):
 				if nj!=5:
 					drawlabel("Jugador 1",85,650)
+					#drawlabel(""+ str(gan[0].prob), 200, 650)
 					drawlabel("Jugador 2",1235,650)
 					marcos(1170,50,200,600,Blanco)#Der
 					marcos(25,50,200,600,Blanco)#Izq
@@ -80,6 +92,7 @@ class JuegoInterfaz:
 					marcos(1180,60,180,380,Color)#Jugador 4
 					marcos(790,470,500,200,Blanco)#Jugador 5
 					marcos(800,480,480,180,Color)#Jugador 5
+					
 			def cargarlistas(nj):
 				if nj!=5:
 					cargarlista(80,150,listajugadores[0],50,False)
@@ -95,6 +108,7 @@ class JuegoInterfaz:
 					cargarlista(210,510,listajugadores[3],50,True)
 					cargarlista(530,85,listajugadores[2],50,True)
 					cargarlista(850,510,listajugadores[4],50,True)
+
 			while Ciclo2: # main game loop
 				ventana.fill(Color3)
 				pygame.draw.rect(ventana,Color,contornojuego) #Contorno verde
@@ -105,11 +119,19 @@ class JuegoInterfaz:
 				cartassobramtes = pygame.image.load("cartas02/sobra.gif")
 				ventana.blit(cartassobramtes,(posisioncartasobra,300))
 				drawlabel(instruccion,580,280)
+
 				if banespacio==False:
 					cargarlistas(self.Parametro)
+					drawlabel("Nombre: " + str(gan2[0][0]) + "  Probabilidad: " + str(gan2[0][1]), 300, 330)
+					drawlabel("Nombre: " + str(gan2[1][0]) + "  Probabilidad: " + str(gan2[1][1]), 300, 350)
+					drawlabel("Nombre: " + str(gan2[2][0]) + "  Probabilidad: " + str(gan2[2][1]), 300, 370)
+					drawlabel("Nombre: " + str(gan2[3][0]) + "  Probabilidad: " + str(gan2[3][1]), 300, 390)
+
 				if banganador:
-					drawlabel("Ganador: "+str(gan[0].nombre),400,330)
-					drawlabel("Jugada: "+str(gan[0].jugada),400,350)
+					drawlabel("Ganador: "+str(gan[0].nombre),900,330)
+					drawlabel("Jugada: "+str(gan[0].jugada),900,350)
+					drawlabel("Probabilidad: "+str(gan[0].prob),900,370)
+
 				#Cartas de jugadores
 				for event in pygame.event.get():
 					if event.type == QUIT:
@@ -120,6 +142,7 @@ class JuegoInterfaz:
 							if banespacio:
 								listajugadores=game.CrearJugadores(self.Parametro)
 								instruccion="*Presione la tecla 'G' para obtener ganador*"
+								gan2=game.all()
 								banespacio=False
 								for i in listajugadores:
 					 				for l in i:
@@ -132,8 +155,13 @@ class JuegoInterfaz:
 							banreiniciar=True
 							banganador=True
 							gan=game.Ganador()
-							print("Nombre: "+str(gan[0].nombre+" Jugada: "+str(gan[0].jugada)))
+							
+							#print("Nombre: "+str(gan[0].nombre+" Jugada: "+str(gan[0].jugada)))
+							#print("prob " + str(gan[0].prob))
+							#for i in ListaJugadorCartas.prob:
+							#	print("Cardona joto: " + str(i))
 						if event.key==pygame.K_z:
+							
 							banespacio=True
 							instruccion="*Presione espacio para repartir cartas*"
 							banreiniciar=False

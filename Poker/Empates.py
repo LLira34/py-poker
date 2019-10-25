@@ -1,6 +1,7 @@
 class Empates:
     def __init__(self):
         pass
+
     def cartaalta(self,listas):        
         print("Entro a carta alta")
         vals=[]
@@ -43,11 +44,12 @@ class Empates:
             for i in listas:
                 print(i.nombre)
                 for m in i.lista:
-                    print ("Nivel: "+str(m.nivel)+" Tipo: "+str(m.tipo))
+                    print ("Nivel : "+str(m.nivel)+" Tipo: "+str(m.tipo))
                 print("")
             print("")
             listas=self.cartaalta(listas)
         return listas
+
     def empatedoblesparejas(self,listas):
         vals=[]
         for i in listas:
@@ -65,10 +67,11 @@ class Empates:
         for i in listas:
             print (i.diccn)
         p=filter(lambda x:x.diccn.get(valor)==comparar,listas)
-        print(p)
+        print("llevo >> " + str(listas[0]))
         for i in p:
             for mm in i.lista:
-                print ("Nivel: "+str(mm.nivel)+" Tipo: "+str(mm.tipo))
+                print ("Nivel : "+str(mm.nivel)+" Tipo: "+str(mm.tipo))
+                
         if len(p)>1:
             for i in range(len(p)):
                 h=filter(lambda x:x.nivel==valor,p[i].lista)

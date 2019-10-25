@@ -1,4 +1,5 @@
 from Empates import Empates
+
 class Pokar(Empates):
     def __init__(self,lista):      
         self.lidic=[self.genediccn(lista),self.genedicct(lista)]
@@ -78,6 +79,3 @@ class Pokar(Empates):
         elif nivel==3:
             vals=self.empatepareja(listas,2)
         return vals
-
-
-

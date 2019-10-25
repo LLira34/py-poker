@@ -1,5 +1,6 @@
 import Interfaz
 import labels
+
 while True:
 	Abrir = Interfaz.Interfaz()
 	Abrir.Ejecutar()

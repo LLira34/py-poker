@@ -60,6 +60,5 @@ class Jugador_Cartas(Pokar):
             nivel=2
             # Probabilidad nivel 2
             prob=0.42
-        return nom,nivel,self.lidic[0]
 
-
+        return nom,nivel,prob,self.lidic[0]

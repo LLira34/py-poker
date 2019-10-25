@@ -7,3 +7,4 @@ class Jugador:
         self.lista=[]
         self.diccn={}
         # Probabilidad
+        self.prob=0

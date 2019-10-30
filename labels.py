@@ -116,7 +116,7 @@ class JuegoInterfaz:
 				ventana.blit(label1,(600,15))
 				generarinterfaz(self.Parametro)
 				posisioncartasobra=cargarlista(615,300,game.lista,3,True)
-				cartassobramtes = pygame.image.load("cartas02/sobra.gif")
+				cartassobramtes = pygame.image.load("cartas/sobra1.gif")
 				ventana.blit(cartassobramtes,(posisioncartasobra,300))
 				drawlabel(instruccion,580,280)
 

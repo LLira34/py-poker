@@ -9,7 +9,7 @@ class Baraja(Carta):
     def inicializacion(self):
         for tipo in["trebol","pica","corazon","diamante"]:
             for nivel in range(2,15):
-                self.lista.append(Carta(nivel,tipo,"cartas02/"+str(nivel)+str(tipo[:1])+".gif"))
+                self.lista.append(Carta(nivel,tipo,"cartas/"+str(nivel)+str(tipo[:1])+".gif"))
         return self.lista
 
     def mezclar(self):

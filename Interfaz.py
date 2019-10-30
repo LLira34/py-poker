@@ -52,7 +52,7 @@ class Interfaz:
 		Blanco = pygame.Color(255,255,255)
 		fuente1 = pygame.font.Font(None, 28)
 		fuente2 = pygame.font.Font(None, 70)
-		logo = pygame.image.load("botones/LogoFondo2.png")
+		logo = pygame.image.load("botones/Fondo-Chido.png")
 			
 		while Ciclo: # main game loop
 			ventana.fill(Color3)

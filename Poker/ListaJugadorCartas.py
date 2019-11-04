@@ -73,7 +73,7 @@ class ListaJugadorCartas(Baraja,Jugador_Cartas):
         num=0
         prob1=0
         porcentaje =100
-        print('XXXXXXXXXXXXXXXXXXXXXXX el cardona es joto')
+        print('XXXXXXXXXXXXXXXXXXXXXXX NICE')
         
 
         for l in listplayers:

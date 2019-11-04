@@ -1,3 +1,8 @@
 .vscode
 build
+<<<<<<< HEAD
 dist
+=======
+dist
+PokerGame.spec
+>>>>>>> e6c95ea4211d45cef666bd409383ee018677f8a0

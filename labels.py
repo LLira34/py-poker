@@ -163,7 +163,7 @@ class JuegoInterfaz:
 						if event.key==pygame.K_z:
 							
 							banespacio=True
-							instruccion="*Presione espacio para repartir cartas*"
+							instruccion="*Presione 'ESPACIO' para repartir cartas*"
 							banreiniciar=False
 							banganador=False
 							game.__init__()

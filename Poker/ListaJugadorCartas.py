@@ -124,14 +124,6 @@ class ListaJugadorCartas(Baraja,Jugador_Cartas):
         print(str(listplayers[2].jugada))
         print(str(listplayers[2].prob))
 
-        
-
-        #print(listplayers[1] + " " + str(i.nombre))
-        #print(listplayers[2] + " " + str(i.nombre))
-        #print(listplayers[3] + " " + str(i.nombre))
-
-
-
         va=self.listajugadores[0].nivel
         listaultimos=[]
 

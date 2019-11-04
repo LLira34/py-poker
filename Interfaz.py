@@ -52,19 +52,19 @@ class Interfaz:
 		Blanco = pygame.Color(255,255,255)
 		fuente1 = pygame.font.Font(None, 28)
 		fuente2 = pygame.font.Font(None, 70)
-		logo = pygame.image.load("botones/Fondo-Chido.png")
+		logo = pygame.image.load("resources/fondo.png") # <------
 			
 		while Ciclo: # main game loop
 			ventana.fill(Color3)
 			ventana.blit(logo,(0,0))
-			Jugar = pygame.image.load("botones/BotonJugar1.png")
-			Jugar2 = pygame.image.load("botones/BotonJugar2.png")
+			Jugar = pygame.image.load("resources/btn1.png") # <------
+			Jugar2 = pygame.image.load("resources/btn2.png") # <------
 			"""jugador2 = pygame.image.load("botones/BtnJugadores/Sombra/jugador2.png")
 			jugador22 = pygame.image.load("botones/BtnJugadores/Brillo/jugador2.png")
 			jugador3 = pygame.image.load("botones/BtnJugadores/Sombra/jugador3.png")
 			jugador33 = pygame.image.load("botones/BtnJugadores/Brillo/jugador3.png")"""
-			jugador4 = pygame.image.load("botones/BtnJugadores/Sombra/jugador4.png")
-			jugador44 = pygame.image.load("botones/BtnJugadores/Brillo/jugador4.png")
+			jugador4 = pygame.image.load("resources/jugador4sombra.png") # <------
+			jugador44 = pygame.image.load("resources/jugador4brillo.png") # <------
 			"""jugador5 = pygame.image.load("botones/BtnJugadores/Sombra/jugador5.png")
 			jugador55 = pygame.image.load("botones/BtnJugadores/Brillo/jugador5.png")"""
 

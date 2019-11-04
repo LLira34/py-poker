@@ -1,0 +1,40 @@
+# Para poder ejecutar el programa, se requiere de una configuración previa.
+# Toda esta configuración es para Windows 10.
+
+# Paso 1
+Para probar el programa debemos descargarlo de la siguiente URL:
+Link https://github.com/LLira34/py-poker
+
+# Paso 1.1
+Para descargarlo, una vez ingresamos a la URL nos muestra un boton que dice 'Clone or download'
+# Paso 1.2
+Despues de dar click en el boton, escogemos la opcion de 'Download ZIP', y listo, empezara la descarga.
+Una vez terminanda la descarga, lo descomprimimos.
+
+Nota. Recomendable descargarlo en el <Escritorio>, para acceder mas facil a la carpeta.
+
+# Paso 2
+El programa requiere del lenguaje de programación Python, en su versión 2.7.
+Para la instalacion de Python 2.7, hay que seguir los pasos que nos ofrece la siguiente URL:
+Link: https://python-guide-es.readthedocs.io/es/latest/starting/install/win.html
+
+Nota. Es recomendable hacer todo lo que dice en la pagina para la correcta utilización.
+
+# Paso 3
+Una vez instalado Python, procedemos a instalar PIP.
+En la URL nos da la opción de instalar PIP, pero ese enlace ya no funciona.
+Por lo cual adjuntamos la URL donde lo podemos descargar y una vez descargado lo ejecutamos.
+Link: https://bootstrap.pypa.io/get-pip.py
+
+# Paso 4
+Despues de instalar PIP, tenemos que instalar la libreria de 'Pygame', ya que con esta es la principal libreria
+para el uso del software.
+Simplemente abrimos una consola (CMD) y ejecutamos: 'pip install pygame'
+
+# Paso 5
+Para abrir el codigo, una vez descargado, lo guardara con el siguiente nombre: 'py-poker-master'
+Procedemos a descomprimirlo, abrimos una consola (CMD) y ejecutamos:
+=> 'cd Desktop', ingresamos a nuestro escritorio mediante la consola
+=> Damos enter
+=> 'cd py-poker-master', ahora ingresamos a la carpeta del software
+=> 'python PokerGame.py', con esto ejecutamos el programa
